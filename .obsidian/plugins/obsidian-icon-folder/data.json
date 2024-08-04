@@ -1,0 +1,50 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 18,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "📚",
+      "MiIcons8Note",
+      "MiIcons8Note100",
+      "MiArchivesDocumentSvgrepoCom",
+      "MiNoteSvgrepoCom"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": false,
+    "iconInTitleEnabled": false,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false
+  },
+  "Go": "MiGopher",
+  "Go/阶段1：Go语言基础入门和编程思维.md": "MiGo",
+  "前端工程化": "MiBuildSvgrepoCom",
+  "Vue": "MiVue",
+  "TypeScript": "MiTypescriptIcon",
+  "Svelte": "MiSvelteIcon",
+  "SQL": "MiMysql",
+  "SQL/MySQL 基本操作.md": "MiMysqlIcon",
+  "Solid": "MiSolidjsIcon",
+  "Nginx": "MiNginx",
+  "JavaScript": "MiJavascript",
+  "Linux": "MiLinuxTux",
+  "Mathematics": "MiMathematicsSvgrepoCom",
+  "杂记": "MiArchivesDocumentSvgrepoCom"
+}
