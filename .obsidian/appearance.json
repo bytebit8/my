@@ -1,8 +1,11 @@
 {
   "interfaceFontFamily": "Ubuntu Mono",
   "textFontFamily": "PT Mono",
-  "monospaceFontFamily": "Overpass Mono",
-  "translucency": false,
+  "monospaceFontFamily": "Geist Mono Medium,Overpass Mono,Geist Mono",
+  "translucency": true,
   "baseFontSize": 16,
-  "cssTheme": ""
+  "cssTheme": "Primary",
+  "nativeMenus": false,
+  "showViewHeader": true,
+  "theme": "moonstone"
 }

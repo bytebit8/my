@@ -43,19 +43,27 @@ sudo mysql_secure_installation;
 ### 查看数据库
 
 ```sql
-SHOW DATABASES
+SHOW DATABASES;
 ```
 
 ### 创建数据库
+
+```SQL
+CREATE DATABASE <database_name>;
+```
 
 ### 修改数据库
 
 ### 删除数据库
 
+```SQL
+DROP DATABASE <database_name>;
+```
+
 ### 切换数据库
 
 ```sql
-USE [database_name]
+USE <database_name>;
 ```
 
 ## 表相关
@@ -64,9 +72,40 @@ USE [database_name]
 
 ### 创建表
 
-### 更新表
+```SQL
+CREATE TABLE <table_name>(
+	field_name dataType constraints(约束条件)
+)
+```
+
+常见约束条件：
+* 主键：`PRIMARY KEY`
+* 非空：`NOT NULL`
+* 唯一：`UNIQUE`
+* 默认值：`DEFAULT`
+
+### 修改表
+
 
 ### 删除表
+
+## 数据相关
+
+### 插入数据
+
+```SQL
+
+INSERT INTO <table_name> (field1, field2, ...)
+VALUES (field1_value, field2_value, ...), (field1_value, field2_value, ...), ...;
+```
+
+### 更新数据
+
+```SQL
+UPDATE <table_name>
+SET field = value
+WHERE condition;
+```
 
 ## FAQ
 

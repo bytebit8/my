@@ -4,35 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "1c723b15c0f754a0",
+        "id": "a0dc4ffe6d7d4598",
         "type": "tabs",
         "children": [
           {
-            "id": "e1d8558db81c4bda",
+            "id": "4c606114643318a0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Mathematics/小学数学/知识点/数位.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1830ad539a923aaf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "杂记/记录对 grub 引导程序字体的修改.md",
+                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -82,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 371.5
+    "width": 200
   },
   "right": {
     "id": "fe3d89be1f831668",
@@ -98,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "杂记/记录对 grub 引导程序字体的修改.md",
+                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "杂记/记录对 grub 引导程序字体的修改.md",
+                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "杂记/记录对 grub 引导程序字体的修改.md"
+                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md"
               }
             }
           },
@@ -155,7 +142,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 469.5
+    "width": 200,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,26 +152,53 @@
       "daily-notes:打开/创建今天的日记": false,
       "templates:插入模板": false,
       "command-palette:打开命令面板": false,
-      "graph:查看关系图谱": false
+      "graph:查看关系图谱": false,
+      "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "1830ad539a923aaf",
+  "active": "4c606114643318a0",
   "lastOpenFiles": [
     "杂记/记录在 Linux 中安装 Obsidian.AppImage.md",
-    "杂记/记录对 grub 引导程序字体的修改.md",
-    "Nginx/Nginx Handbook.md",
-    "杂记",
-    "Mathematics/小学数学/知识点/数位.md",
-    "Mathematics/小学数学/13.8.md",
-    "Mathematics/小学数学/小学数学.md",
-    "TypeScript/文档.md",
-    "Svelte/文档.md",
+    "杂记/记录对 Grub 引导程序字体的修改.md",
+    "杂记/手动在 Grub 中添加 Windows 启动项.md",
+    "前端工程化/Changesets/Changesets.md",
+    "杂记/Obsidian 官方帮助文档.md",
+    "前端工程化/微前端",
     "前端工程化/微前端.md",
+    "SQL/MySQL 基本操作.md",
+    "前端工程化/Changesets",
+    "SQL/SQL 必知必会（第五版）.md",
+    "SQL/完全限定列名.md",
+    "Mathematics/初中数学/趣味数学题.md",
+    "Mathematics/初中数学/assets/Pasted image 20240812103528.png",
+    "Mathematics/初中数学/assets/Pasted image 20240812103539.png",
+    "Mathematics/初中数学/assets/Pasted image 20240805192826.png",
+    "Go/慕课go开发工程师体系课/阶段1：Go语言基础入门和编程思维.md",
+    "Go/慕课go开发工程师体系课/assets/slice-extends.svg",
+    "Go/慕课go开发工程师体系课/assets/slice-extends.drawio",
+    "Go/慕课go开发工程师体系课/assets/未命名.canvas",
+    "Go/慕课go开发工程师体系课/make.md",
+    "Go/慕课go开发工程师体系课/().md",
+    "Go/慕课go开发工程师体系课/assets/slice.drawio",
+    "Go/慕课go开发工程师体系课/assets/slice.svg",
+    "Go/慕课go开发工程师体系课/assets/阶段1：Go语言基础入门和编程思维 2024-08-07 10.53.21.excalidraw.md",
+    "Go/慕课go开发工程师体系课/assets/slice 1.svg",
+    "Go/慕课go开发工程师体系课/assets/slice 2.svg",
+    "Go/慕课go开发工程师体系课/Drawing 2024-08-07 10.48.45.excalidraw.md",
+    "Go/慕课go开发工程师体系课/assets",
+    "Excalidraw",
+    "Mathematics/小学数学/知识点/整数.md",
+    "Mathematics/小学数学/知识点/数位.md",
+    "Mathematics/小学数学/知识点/进制.md",
+    "Mathematics/初中数学/assets",
+    "Go/慕课go开发工程师体系课",
+    "TypeScript/文档.md",
+    "杂记",
+    "Svelte/文档.md",
+    "Nginx/Nginx Handbook.md",
     "JavaScript/Promise API.md",
     "JavaScript/ECMAScript 6.md",
     "Linux/常用命令.md",
-    "Solid/文档.md",
-    "Go/阶段1：Go语言基础入门和编程思维.md",
-    "SQL/MySQL 基本操作.md"
+    "Solid/文档.md"
   ]
 }

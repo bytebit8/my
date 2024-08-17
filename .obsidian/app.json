@@ -2,5 +2,9 @@
   "showLineNumber": true,
   "alwaysUpdateLinks": true,
   "newFileLocation": "current",
-  "attachmentFolderPath": "./assets"
+  "attachmentFolderPath": "./assets",
+  "promptDelete": false,
+  "rightToLeft": false,
+  "showRibbon": true,
+  "showInlineTitle": true
 }
