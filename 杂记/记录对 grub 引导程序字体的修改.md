@@ -8,7 +8,7 @@ grub 的配置文件有两个：
 ## 修改字体
 1. 使用 `grub-mkfont` 命令从 ttf 字体文件中生成可以被 grub 读取的 pf 字体文件。
 ```shell
-grub-mkfont -s 22 -o /home/shen/UbuntuMono-R.ttf /boot/grub/ubuntu-mono.pf2
+grub-mkfont -s 22 -o /boot/grub/ubuntu-mono.pf2 /home/shen/UbuntuMono-R.ttf
 ```
 2. 编辑 grub 静态配置文件
 ```shell
