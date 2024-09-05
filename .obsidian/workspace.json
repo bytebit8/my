@@ -11,6 +11,14 @@
             "id": "f62d18ce2e9911c9",
             "type": "leaf",
             "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+            "id": "f62d18ce2e9911c9",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
                 "file": "前端工程化/Changesets/Changesets 入门精通.md",
