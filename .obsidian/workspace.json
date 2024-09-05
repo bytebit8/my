@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端工程化/Changesets/Changesets 入门精通.md",
+                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 288
   },
   "right": {
     "id": "9441c43221054697",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端工程化/Changesets/Changesets 入门精通.md",
+                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端工程化/Changesets/Changesets 入门精通.md",
+                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端工程化/Changesets/Changesets 入门精通.md"
+                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md"
               }
             }
           }
@@ -147,8 +147,56 @@
       "obsidian-excalidraw-plugin:新建绘图文件": false
     }
   },
-  "active": "40d30f56ca5b6085",
+  "active": "dbd0c5c073094d67",
   "lastOpenFiles": [
-    "前端工程化/Changesets/Changesets 项目架构.md"
+    "package-lock.json",
+    "node_modules/@changesets/should-skip-package/src/index.ts",
+    "node_modules/@changesets/should-skip-package/src",
+    "node_modules/@changesets/should-skip-package/CHANGELOG.md",
+    "node_modules/@changesets/should-skip-package/package.json",
+    "node_modules/@changesets/should-skip-package/dist/declarations/src/index.d.ts",
+    "node_modules/@changesets/should-skip-package/dist/declarations/src",
+    "node_modules/@changesets/should-skip-package/dist/declarations",
+    "node_modules/@changesets/should-skip-package/dist/changesets-should-skip-package.esm.js",
+    "node_modules/@changesets/should-skip-package/dist/changesets-should-skip-package.cjs.mjs",
+    "node_modules/@changesets/should-skip-package/dist/changesets-should-skip-package.cjs.js",
+    "node_modules/@changesets/should-skip-package/dist/changesets-should-skip-package.cjs.d.ts.map",
+    "node_modules/@changesets/assemble-release-plan/README.md",
+    "node_modules/@changesets/assemble-release-plan/CHANGELOG.md",
+    "node_modules/@changesets/assemble-release-plan/src/README.md",
+    "node_modules/@changesets/logger/README.md",
+    "node_modules/@changesets/logger/CHANGELOG.md",
+    "node_modules/@changesets/git/README.md",
+    "node_modules/@changesets/git/CHANGELOG.md",
+    "node_modules/@changesets/get-release-plan/README.md",
+    "node_modules/@changesets/get-release-plan/CHANGELOG.md",
+    "node_modules/@changesets/apply-release-plan/README.md",
+    "node_modules/@changesets/apply-release-plan/CHANGELOG.md",
+    "node_modules/@changesets/pre/README.md",
+    "node_modules/@changesets/pre/CHANGELOG.md",
+    "node_modules/@changesets/config/README.md",
+    "node_modules/@changesets/write/README.md",
+    "node_modules/@changesets/write/CHANGELOG.md",
+    "node_modules/@changesets/get-dependents-graph/README.md",
+    "node_modules/@changesets/get-dependents-graph/CHANGELOG.md",
+    "node_modules/@changesets/cli/README.md",
+    "node_modules/@changesets/cli/default-files/README.md",
+    "node_modules/@changesets/read/README.md",
+    "node_modules/@changesets/read/CHANGELOG.md",
+    "node_modules/prettier/README.md",
+    "node_modules/js-yaml/README.md",
+    "前端工程化/Changesets/assets/how_dose_changesets_work.svg",
+    "前端工程化/Changesets/assets/changesets-steps.svg",
+    "前端工程化/Changesets/assets/changeset-version.svg",
+    "前端工程化/Changesets/assets/assets/file-checkmark-icon_0.svg",
+    "前端工程化/Changesets/assets/assets/git-merge-svgrepo-com (1).svg",
+    "前端工程化/Changesets/assets/how_dose_changesets_work.png",
+    "前端工程化/Changesets/assets/assets/software-development-icon.svg",
+    "前端工程化/Changesets/assets/assets/programmer-icon.svg",
+    "前端工程化/Changesets/assets/assets/programmer-icon_0.svg",
+    "前端工程化/Changesets/assets/assets/information-technology-icon.svg",
+    "前端工程化/Changesets/assets/未命名.canvas",
+    "前端工程化/Changesets/未命名.canvas",
+    "Go/慕课go开发工程师体系课/assets/未命名.canvas"
   ]
 }
