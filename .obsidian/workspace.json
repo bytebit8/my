@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
+                "file": "前端工程化/Changesets/Changesets 入门精通.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,14 +85,14 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "前端工程化/Changesets/Changesets 入门精通.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           },
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md",
+                "file": "前端工程化/Changesets/Changesets 入门精通.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,16 +125,16 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "杂记/手动在 Grub 中添加 Windows 启动项.md"
+                "file": "前端工程化/Changesets/Changesets 入门精通.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -148,7 +148,7 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "43dd2fcb7b528105",
+  "active": "32afce6e38fdf725",
   "lastOpenFiles": [
     "CHANGELOG.md",
     "杂记/手动在 Grub 中添加 Windows 启动项.md",
