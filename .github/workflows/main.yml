@@ -21,7 +21,10 @@ jobs:
           node-version: 20
 
       - name: Install Changesets/cli
-        run: npm i @changesets/cli --save-dev & npm exec --package @changesets/cli -c "changesets init"
+        run: npm i @changesets/cli --save-dev
+
+      - name: Init Changesets
+        run: npm exec --package @changesets/cli -c "changesets init"
 
       - name: Create Release Pull Request
         uses: changesets/action@v1
