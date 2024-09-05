@@ -595,7 +595,7 @@ git push --follow-tags
 使用包的版本来创建git标签。
 该命令的行为与 `changeset publish` 创建git标签相同。主要用于自定义发包的场景，比如用 `npm run publish -ws` 替代 `changeset publish`，此时 `changeset add` 可以很方便的为所有包创建 git 标签。 
 
-通常是在 `changeset tag` 之前运行 `chagneset version` 命令，以便在创建 git 标签之前更新 `package.json` 版本。
+通常是在 `chagneset version` 命令之后运行 `changeset tag`，以便在创建 git 标签之前更新 `package.json` 版本。
 
 最后记得手动推送下：
 ```shell
