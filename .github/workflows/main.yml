@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-    - master
+      - master
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -14,18 +14,26 @@ jobs:
     permissions:
       contents: write #允许写入
     steps:
-    - name: Checkout Repo
-      uses: actions/checkout@v3
+      - name: Checkout Repo
+        uses: actions/checkout@v3
 
-    - name: Setup Node.js 20
-      uses: actions/setup-node@v3
-      with:
-        node-version: 18
+      - name: Setup Node.js 20
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
 
-    - name: Install Dependencies
-      run: npm ci
+      - name: Install Dependencies
+        run: npm ci
 
-    - name: Create Release Pull Request
-      uses: changesets/action@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
+      - name: Create Release Pull Request
+        uses: changesets/action@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
+
+      - name: Create Changeset Tag
+        run: npm run chagneset tag
+
+      - name: Push Changest Tag
+        run: git push --follow-tags
+        env:
+          GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
