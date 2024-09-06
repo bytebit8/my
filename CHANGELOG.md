@@ -1,5 +1,11 @@
 # my
 
+## 1.0.4
+
+### Patch Changes
+
+- 0ba6854: 更新 changesets 文档格式
+
 ## 1.0.3
 
 ### Patch Changes
