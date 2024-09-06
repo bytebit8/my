@@ -148,8 +148,10 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "32afce6e38fdf725",
+  "active": "43dd2fcb7b528105",
   "lastOpenFiles": [
+    "前端工程化/Changesets/Changesets 项目架构.md",
+    "前端工程化/Changesets/Changesets 入门精通.md",
     "CHANGELOG.md",
     "杂记/手动在 Grub 中添加 Windows 启动项.md",
     "package-lock.json",
@@ -184,8 +186,6 @@
     "node_modules/@changesets/cli/README.md",
     "node_modules/@changesets/cli/default-files/README.md",
     "node_modules/@changesets/read/README.md",
-    "node_modules/@changesets/read/CHANGELOG.md",
-    "node_modules/prettier/README.md",
     "前端工程化/Changesets/assets/how_dose_changesets_work.svg",
     "前端工程化/Changesets/assets/changesets-steps.svg",
     "前端工程化/Changesets/assets/changeset-version.svg",

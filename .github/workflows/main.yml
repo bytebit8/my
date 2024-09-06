@@ -11,6 +11,8 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write #允许写入
     steps:
     - name: Checkout Repo
       uses: actions/checkout@v3
@@ -27,5 +29,3 @@ jobs:
       uses: changesets/action@v1
       env:
         GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
-    - name: Create Changeset tag
-      run: npm run changeset tag
