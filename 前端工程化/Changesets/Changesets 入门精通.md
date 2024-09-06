@@ -13,11 +13,11 @@
 
 核心功能：
 
-- [*] 版本提升：会修改 `package.json`文件的 `version` 字段。
-- [*] 日志变更：“包”根目录创建 `CHANGELOG.md` 文件并追加日志详情。
-- [*] 发布变更：自动识别“包”是否存在新的版本需要发布。
+- [ ] 版本提升：会修改 `package.json`文件的 `version` 字段。
+- [ ] 日志变更：“包”根目录创建 `CHANGELOG.md` 文件并追加日志详情。
+- [ ] 发布变更：自动识别“包”是否存在新的版本需要发布。
 
->[!question]
+>[!note]
 >**“变更日志”**：在分支或提交中所做出更改的信息说明。
 >**“Multi-Package Repositories”**: 多包存储库，Monorepo 的称呼方式之一。
 >
@@ -37,7 +37,6 @@
 ---
 Change all the things
 ```
-^e097f9
 
 “变更集文件”存放在项目根目录 `.changeset` 的隐藏件夹中：
 ```
@@ -59,7 +58,7 @@ npm i @changesets/cli --save-dev
 在 `package.json` 文件的 `scripts` 字段，添加以下命令：
 ```json
 "scripts":{
-	"changeset":"changeset"
+  "changeset":"changeset"
 }
 ```
 
@@ -81,7 +80,7 @@ npm run changeset init
 	紧接着开始选择要变更的版本类型，Changesets 底层通过 `semver` 包来实现语义化版本控制。主版本(major)、次版本(minor)、补丁版本(patch)。
 
 **3. Enter Summary**
-	最后，填入 `Summary` 也就是我们变更的摘要内容，最终就会生成一个名称随机但人类可读的 changeset 文件了。文件格式如：[[#^e097f9]] 所示。
+	最后，填入 `Summary` 也就是我们变更的摘要内容，最终就会生成一个名称随机但人类可读的 changeset 文件了[^1]。
 	“变更集”文件名是由底层的 `human-id` 包生成的具有随机，人类可读的名称，以避免在生成它们时发生冲突。
 
 下面是命令完整的交互过程：
@@ -158,7 +157,7 @@ Changesets 有关具有依赖关系包的变更策略如下：
 	例如 ：`pkg-a` 依赖了 `pkg-b:^1.0.0`，当 `pkg-b` 产生 bump major 时，Changesets 会以 `patch` 的方式自动更新 `pkg-a` 包。
 
 2. 当单仓同时存在**多个变更包**时，对于具有依赖关系的包，会为依赖者包额外增加一个 `patch` 级别的版本变更，同时将依赖更新日志写入到依赖者包的 CHANGELOG.md 文件中。
-	例如 ：`pkg-a` 依赖了 `pkg-b`，当同时变更了 `pkg-a` 与 `pkg-b` 时，会为 `pkg-a` 额外追加一个 `patch` 并生成依赖的更新日志。 ^a005e5
+	例如 ：`pkg-a` 依赖了 `pkg-b`，当同时变更了 `pkg-a` 与 `pkg-b` 时，会为 `pkg-a` 额外追加一个 `patch` 并生成依赖的更新日志。
 
 
 **为什么当依赖包超出语义版本控制范围时需要强行对“依赖者包”进行变更？**
@@ -175,7 +174,7 @@ Changesets 有关具有依赖关系包的变更策略如下：
 1. 在 Git 中不能很方便的记录详细的变更日志。
 2. 记录日志的最佳时机是在提交 `PR` 时（此时记忆犹新），而不是在最终发版时。
 
-对此，`Changesets` 提出了创建“变更集”文件的方案。变更集文件记录了有关变更的日志信息和版本类型。通过将“变更集”文件存储在本地文件系统，以解决 Git 存储库的限制。在提交产物时，随同 `PR` 一起提交到远程存储库，最后在恰当的时机去消耗这些变更集文件，从而实现“版本提升”和“日志变更”的操作。
+对此，`Changesets` 提出了创建“变更集”[^1]文件的方案。变更集文件记录了有关变更的日志信息和版本类型。通过将“变更集”文件存储在本地文件系统，以解决 Git 存储库的限制。在提交产物时，随同 `PR` 一起提交到远程存储库，最后在恰当的时机去消耗这些变更集文件，从而实现“版本提升”和“日志变更”的操作。
 
 变更集文件的版本类型遵循了语义化版本控制([semver](https://semver.org/lang/zh-CN/))的标准，对于标准发行版：
 * `major` ：主版本
@@ -219,7 +218,7 @@ Changesets 有关具有依赖关系包的变更策略如下：
 在 `.changeset/config.json` 文件中通过 `fixed` 字段声明一组固定的包。
 ```json
 {
-	"fixed":[["pkg-a","pkg-b"]]
+  "fixed":[["pkg-a","pkg-b"]]
 }
 ```
 
@@ -242,7 +241,9 @@ Changesets 有关具有依赖关系包的变更策略如下：
 
 `fixed` 字段支持使用 `glob` 表达式匹配特定模式的包。
 ```json
-"fixed":[["pkg-*"]]
+{
+  "fixed":[["pkg-*"]]
+}
 ```
 
 ### 联动包
@@ -251,14 +252,14 @@ Changesets 有关具有依赖关系包的变更策略如下：
 >适用于“核心包”和一组依赖其的“插件包”。
 
 对一组包进行版本控制，与“固定包”不同之处在于：
-1. 允许联动包集中的包单独变更（只限拥有变更集的包才能进行变更）。 ^f80c51
+1. 允许联动包集中的包单独变更（只限拥有变更集的包才能进行变更）。
 2. 允许联动包集中的包单独发布。
-3. 当联动包集中的一些包同时变更时，会用其中版本提升最高的哪个包的版本作为其它包最终要提升的版本。 ^659c15
+3. 当联动包集中的一些包同时变更时，会用其中版本提升最高的哪个包的版本作为其它包最终要提升的版本。
 
 使用 `linked` 字段可以定义一组“联动包”：
 ```json
 {
-	"linked":[["core", "plugin-a", "plugin-b"]]
+  "linked":[["core", "plugin-a", "plugin-b"]]
 }
 ```
 
@@ -267,17 +268,17 @@ Changesets 有关具有依赖关系包的变更策略如下：
 * `plugin-a@1.0.0`
 * `plugin-b@1.0.0`
 
-创建变更集文件， `plugin-a` 补丁变更，现在版本情况如下:
+创建变更集文件， `plugin-a` 补丁变更，现在版本情况如下(满足 1):
 * `core@1.0.0`
-* `plugin-a@1.0.1`*（满足 [[#^f80c51]]）*
+* `plugin-a@1.0.1
 * `plugin-b@1.0.0`
 
-创建变更集文件 `plugin-a` 补丁变更，`plugin-b` 次版本变更，现在版本情况如下：
+创建变更集文件 `plugin-a` 补丁变更，`plugin-b` 次版本变更，现在版本情况如下（满足 3）：
 * `core@1.0.0`
-* `plugin-a@1.1.0`*（满足 [[#^659c15]]）*
-* `plugin-b@1.1.0`*（满足 [[#^659c15]]）*
+* `plugin-a@1.1.0
+* `plugin-b@1.1.0`
 
-创建变更集，核心包 `core` 进行主版本变更,现在的版本情况如下（依赖者包也满足 [[#^659c15]]）：
+创建变更集，核心包 `core` 进行主版本变更,现在的版本情况如下（满足 3，满足 [^2]）：
 * `core@2.0.0`
 * `plugin-a@2.0.0`
 * `plugin-b@2.0.0`
@@ -285,7 +286,7 @@ Changesets 有关具有依赖关系包的变更策略如下：
 与 “固定包”相同，联动包也支持 `glob` 匹配模式：
 ```json
 {
-	"linked": [["core","plugin-*"]]
+  "linked": [["core","plugin-*"]]
 }
 ```
  
@@ -443,7 +444,7 @@ git push --follow-tags
 
 ### updateInternalDependencies
 
-控制依赖者包版本提升时的提升类型（详细描述：[[#^a005e5]]）
+控制依赖者包[^3]版本提升时的提升类型。
 取值：
 - 默认值：`patch` 
 
@@ -464,7 +465,7 @@ git push --follow-tags
 示例：
 ```json
 {
-	"changelog":["@changesets/changelog-github", {"repo": "xxx"}]
+  "changelog":["@changesets/changelog-github", {"repo": "xxx"}]
 }
 ```
 
@@ -582,8 +583,7 @@ git push --follow-tags
   将状态信息以 JSON 格式输出到指定的文件中，以供其它工具使用。
 - `--since`
   仅显示自特定分支或 git 标签以及 Commit 号(如 `main` 或最新版本的 git 哈希值)之后的 changesets 信息。（这可以帮助我们检查是否需要“变更集”文件，但是更推荐使用 `changeset bot` 来检查。）
-
-
+  
 ### pre
 
 进入/退出“预发布模式”。
@@ -618,7 +618,7 @@ Changesets 默认使用内置的 `@changesets/changelog-git` 包生成默认的�
 
 下面是方法的执行时机：
 * `getReleaseLine` 方法会在消耗变更集文件时为每个受影响的包调用一次，如果一个 changeset 前言数据列出了多个受影响的包，这会为每个包都调用一次该方法，以生成日志信息。
-* `getDependencyReleaseLine` 该方法会在“包”的依赖包发生变更时调用，用于生成依赖者包的日志信息。因为可能会有多个依赖，所以这里接收的参数是一个数组。
+* `getDependencyReleaseLine` 该方法会在“包”的依赖包[^2]发生变更时调用，用于生成依赖者包[^3]的日志信息。因为可能会有多个依赖，所以这里接收的参数是一个数组。
 
 下面是方法参数说明：
 - `getReleaseLine(changeset, type, options)`
@@ -653,7 +653,7 @@ type dependenciesUpdated = {
 第三个参数 `options`，可以配置自定义模块时一同传入：
 ```json
 {
-	"changelog":["./changelog.js", {"repo": "xxx"}]
+  "changelog":["./changelog.js", {"repo": "xxx"}]
 }
 ```
 具体实现可以参考 `@changesets/changelog-github` 包。
@@ -732,7 +732,7 @@ jobs:
       contents: write #允许写入
 ```
 
-在 GitLab 中可以使用第三方类似的工具：[changesets-gitlab]( https://github.com/un-ts/changesets-gitlab)
+在 GitLab 中可以使用第三方类似的工具 [changesets-gitlab]( https://github.com/un-ts/changesets-gitlab)
 ## 常见问题
 
 ### 什么时候需要添加多个变更集文件？
@@ -751,3 +751,8 @@ jobs:
 
 - [Changesets: 流行的 monorepo 场景发包工具](https://zhuanlan.zhihu.com/p/427588430)
 - [Changesets 官方中文文档](https://changesets-docs.vercel.app/zh-CN)
+
+---
+[^1]: 一个带有 YAML 前言的 Markdown 文件，由“前言数据”与“内容摘要”两部分组成。
+[^2]: A 依赖 B，B 是 A 的“依赖包”。
+[^3]: A 依赖 B，A 是 B 的“依赖者包”。
