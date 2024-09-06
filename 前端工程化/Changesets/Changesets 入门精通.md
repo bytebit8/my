@@ -120,7 +120,7 @@ npm run changeset version
 
 变更集文件一旦消耗就会被删除，因此每个变更集文件只会被使用一次。
 
-![[changeset-version.svg]]
+![changesets-version.svg](./assets/changeset-version.svg)
 
 ### 发布变更
 
@@ -195,7 +195,7 @@ Changesets 有关具有依赖关系包的变更策略如下：
 
 大致步骤，如下图所示：
 
-![[changesets-steps.svg]]
+![changesets-steps.svg](./assets/changesets-steps.svg)
 
 但是，要要理解 Changesets 工作流程中蕴含的真实意图，则必须要将变更集文件的创建与消耗区分开来看。“变更集”文件一种是含有变更意图的文件，它包含了两部分内容：“要提升版本的类型”和“要记录的变更信息”。只有消耗变更集文件，才会实际进行版本提升和日志记录。因此，这种设计很容易围绕“变更集”文件，将变更流程分派给不同职责的角色去完成：
 * `Developer` 在变更时创建变更集文件，并随同 `PR` 一起提交。
@@ -203,7 +203,7 @@ Changesets 有关具有依赖关系包的变更策略如下：
 
 通常而言，后两个步骤可交由 CI 完成，项目的 Maintainer 只需要完成审批即可。下面是按职责区分的 Changesets 工作流程：
 
-![[how_dose_changesets_work.svg]]
+![how_dose_changesets_work.svg](./assets/how_dose_changesets_work.svg)
 
 > [!tip]
 > 由于 Changesets  只专注于发布和变更的版本和日志,对于仓库的更改如果不需要这些就无需添加 changeset。所以,我们建议在缺少 changeset 的情况下,不应当一味的去阻止合并请求。
@@ -712,8 +712,27 @@ export default defaultChangelogFunctions;
 
 ## 自动化流程
 
+关于自动化变更，Changesets 提供了两款工具：
+* `Bot` 
+  一款 GitHub 机器人人程序，可以对 PR 进行检测，并提供创建变更集文件的功能。注意的是它只能创建而不能消耗变更集文件。
+* `@changeset/action` 
+  一款 GitHub Action 程序。可以在 CI 中自动执行 `changeset version` 与 `changeset publish` 命令。可以实现自动消耗变更集文件，以提升版本、记录日志，还可以创建新的合并请求（MR）、并发布变更的包。
 
+关于 `@changeset/action` 的使用，可以查阅[官方文档](https://github.com/changesets/action)：
 
+>[!tip]
+>需要注意授予 CI 写入的权限。
+
+```yaml
+jobs:
+  release:
+    name: Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write #允许写入
+```
+
+在 GitLab 中可以使用第三方类似的工具：[changesets-gitlab]( https://github.com/un-ts/changesets-gitlab)
 ## 常见问题
 
 ### 什么时候需要添加多个变更集文件？

@@ -8,9 +8,7 @@
 
 ## Bot
 
-一款专门用于 GitHub 的 Bot 程序，可以检测 PR 中的变更集文件。
-其功能与 action 相同，只是更加的自动化。
-
+一款专门用于 GitHub 的 Bot 程序，可以检测 PR 中的变更集文件。项目的 Maintainer 可以在 PR 中直接添加变更集文件。
 ## Changesets
 
 一个 `Private` 的 Monorepo，包含如下关键的子包：
