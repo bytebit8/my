@@ -31,7 +31,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
 
       - name: Create Changeset Tag
-        run: npm run chagneset tag
+        run: npm run changeset tag
 
       - name: Push Changest Tag
         run: git push --follow-tags
