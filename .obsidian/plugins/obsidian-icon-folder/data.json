@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiInfo",
-      "ℹ",
-      "👨‍💼",
-      "LiHardHat",
-      "MiDockerIcon"
+      "MiCharityDonationHandLoveIcon",
+      "MiBoxLoveLikeFavouriteHeartPackageGiftSvgrepoCom",
+      "MiFavouriteStarSvgrepoCom",
+      "🧩",
+      "🦋"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -34,7 +34,6 @@
     "debugMode": false
   },
   "Go": "MiGopher",
-  "前端工程化": "MiBuildSvgrepoCom",
   "Vue": "MiVue",
   "TypeScript": "MiTypescriptIcon",
   "Svelte": "MiSvelteIcon",
@@ -48,5 +47,10 @@
   "杂记": "MiArchivesDocumentSvgrepoCom",
   "Go/慕课go开发工程师体系课/阶段1：Go语言基础入门和编程思维.md": "MiGo",
   "SQL/SQL 必知必会（第五版）.md": "MiMysqlIcon",
-  "CHANGELOG.md": "LiInfo"
+  "CHANGELOG.md": "LiInfo",
+  "前端工程化/PackageManager": "📦",
+  "前端工程化/PackageManager/NPM": "MiNpmIcon",
+  "前端工程化/Changesets": "🦋",
+  "前端工程化": "🧩",
+  "Favourite": "MiFavouriteStarSvgrepoCom"
 }
