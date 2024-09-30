@@ -1,5 +1,11 @@
 # my
 
+## 1.0.5
+
+### Patch Changes
+
+- 6b5b355: add Node Package Manager Docs.
+
 ## 1.0.4
 
 ### Patch Changes
