@@ -22,7 +22,7 @@
 >**“Multi-Package Repositories”**: 多包存储库，Monorepo 的称呼方式之一。
 >
 
-而能让 `Changesets` 做出以上两个行为的前提就是创建“变更集文件（changeset）”。
+而能让 `Changesets` 做出以上三个行为的前提就是创建“变更集文件（changeset）”。
 
 ## Changeset 是什么？
 
@@ -47,13 +47,13 @@ Change all the things
 
 ## 快速指南
 
-### 安装 changesets/cli
+### 安装 @changesets/cli
 
-```bash
+```shell
 npm i @changesets/cli --save-dev
 ```
 
-### 初始化项目
+### 配置脚本命令
 
 在 `package.json` 文件的 `scripts` 字段，添加以下命令：
 ```json
@@ -61,6 +61,8 @@ npm i @changesets/cli --save-dev
   "changeset":"changeset"
 }
 ```
+
+### 初始化项目
 
 执行命令初始化项目：
 ```shell
@@ -105,8 +107,7 @@ npm run changeset init
 ```
 
 >[!tip]
->也可以完全手动创建 changeset 文件，这是被允许的。
-
+>也可以完全手动创建 changeset 文件，这是被允许的！
 ### 消耗变更集文件
 
 创建变更集文件不会执行版本变更与日志记录的行为，只有在消耗变更集文件时，才会为每个受影响的包进行**版本提升**（基于每个包的最大版本提升），并且还会在每个包的根目录下创建（如果不存在）一个 **CHANGELOG.md** 的文件，以追加的方式写入变更的日志（摘要内容），并在需要的时候同时更新依赖的版本。
@@ -130,12 +131,14 @@ npm run changeset publish
 
 ### 组合变更集文件
 
-变更集文件是可堆叠的，可以将任意数量的变更集合并为一个发布，`Changesets` 会压平每个包的版本提升类型（每个版本类型只会被提升一次）。
+变更集文件是可**堆叠**的，可以将任意数量的变更集合并为一个发布，`Changesets` 会压平每个包的版本提升类型（每个版本类型只会被提升一次，并按照从大到小的优先顺序）。
 
 * 多个 `patch` 合并成一个 `patch` 提升。
 * 多个 `patch`，一个 `minor`，合并为一个 `minor`。
 * 多个 `patch`，多个 `minor`，一个 `major`，合并为一个 `major` 提升。
 * 多个 `major` 合并为一个 `major`。
+
+> 类似与一种防抖(Debounce)机制。
 
 ## 依赖变更
 
@@ -153,17 +156,17 @@ Changesets 有关具有依赖关系包的变更策略如下：
 - A 包则是消费者。
 
 **什么场景下 Changesets 会自动变更“依赖者包”？**
-1. 当单仓的**某个被依赖包**存在重大的版本变更时，Changesets 会检查依赖它的其它包是否存在超出语义版本控制范围（也就是不能匹配到所依赖包的最新版本）的情况，如果存在，Changesets 会以 `patch` 的方式自动更新所有依赖者包，并将依赖更新日志写入到依赖者包的 CHANGELOG.md 文件中。
+1. 当单仓的**某个被依赖包**存在**重大**的版本变更时，Changesets 会检查依赖它的“依赖者包”是否存在超出语义版本控制范围（也就是不能匹配到依赖包的最新版本）的情况，如果存在，Changesets 会以 `patch` 的方式自动更新涉及到的“依赖者包”，并将依赖更新日志写入到依赖者包的 CHANGELOG.md 文件中。
 	例如 ：`pkg-a` 依赖了 `pkg-b:^1.0.0`，当 `pkg-b` 产生 bump major 时，Changesets 会以 `patch` 的方式自动更新 `pkg-a` 包。
 
 2. 当单仓同时存在**多个变更包**时，对于具有依赖关系的包，会为依赖者包额外增加一个 `patch` 级别的版本变更，同时将依赖更新日志写入到依赖者包的 CHANGELOG.md 文件中。
 	例如 ：`pkg-a` 依赖了 `pkg-b`，当同时变更了 `pkg-a` 与 `pkg-b` 时，会为 `pkg-a` 额外追加一个 `patch` 并生成依赖的更新日志。
 
 
-**为什么当依赖包超出语义版本控制范围时需要强行对“依赖者包”进行变更？**
+**为什么当依赖包超出语义版本控制范围时需要强行对其“依赖者包”们进行变更？**
 	因为在 Monorepo 中具有依赖关系的多个子包，其底层都是以相对位置引入的，如果依赖者包的语义版本范围无法匹配到被依赖包的最新版本，那么“包管理器”就可能会拒绝被依赖包的载入，因此就必须要在此种情况下对依赖者包进行自动检查并更新，以确保依赖关系的正确性。
 
-**能否忽略 Changesets 的自动检查和更新机制？**
+**依赖者包能否忽略 Changesets 的自动检查和更新机制？**
 	有的。
 	对于 npm 可以将依赖包的版本控制范围修改为：`pkg-b:*`。
 	对于 pnpm 则可以修改为：`pkg-b:workspace:*` 。
@@ -171,12 +174,15 @@ Changesets 有关具有依赖关系包的变更策略如下：
 ## 背后理念
 
 按照官方文档中给出的有关 `Changesets` 背后的理念，它主要是为了解决以下两个问题被设计出来的：
-1. 在 Git 中不能很方便的记录详细的变更日志。
-2. 记录日志的最佳时机是在提交 `PR` 时（此时记忆犹新），而不是在最终发版时。
+
+1. **在何处记录日志？**
+	- 在 Git 中不能很方便的记录详细的变更日志。
+2. **在何时记录日志？**
+	- 记录日志的最佳时机是在提交 `PR` 时（此时记忆犹新），而不是在最终发版时。
 
 对此，`Changesets` 提出了创建“变更集”[^1]文件的方案。变更集文件记录了有关变更的日志信息和版本类型。通过将“变更集”文件存储在本地文件系统，以解决 Git 存储库的限制。在提交产物时，随同 `PR` 一起提交到远程存储库，最后在恰当的时机去消耗这些变更集文件，从而实现“版本提升”和“日志变更”的操作。
 
-变更集文件的版本类型遵循了语义化版本控制([semver](https://semver.org/lang/zh-CN/))的标准，对于标准发行版：
+变更集文件的版本类型遵循了语义化版本控制([semver](https://semver.org/lang/zh-CN/))，对于正常发行版：
 * `major` ：主版本
 * `minor` ：次版本
 * `patch` ：补丁版本
@@ -188,9 +194,10 @@ Changesets 有关具有依赖关系包的变更策略如下：
 `Changests` 的工作流程很简单：
 
 1. 每次变更都使用 `changeset add` 创建变更集文件。
-2. 准备发布时运行 `changeset version` 消耗变更集文件。
-3. 验证无误后,将变更合并到主线分支。
-4. 最后执行 `changeset publish` 发布变更的包。
+2. 将变更集文件随同 PR 一通提交。
+3. 准备发布时运行 `changeset version` 消耗变更集文件。
+4. 验证无误后,将变更合并到主线分支。
+5. 最后执行 `changeset publish` 发布变更的包。
 
 大致步骤，如下图所示：
 
@@ -252,7 +259,7 @@ Changesets 有关具有依赖关系包的变更策略如下：
 >适用于“核心包”和一组依赖其的“插件包”。
 
 对一组包进行版本控制，与“固定包”不同之处在于：
-1. 允许联动包集中的包单独变更（只限拥有变更集的包才能进行变更）。
+1. 允许联动包集中的包单独变更（只限拥有变更集文件的包才能进行变更）。
 2. 允许联动包集中的包单独发布。
 3. 当联动包集中的一些包同时变更时，会用其中版本提升最高的哪个包的版本作为其它包最终要提升的版本。
 
@@ -310,28 +317,29 @@ npm run changeset version -- --snaphost canary
 ```shell
 npm run changeset publish -- --tag cannary --no-git-tag
 ```
-`--tag` 参数可以用自定义的“分发标签”发布到 npm 上，而不是覆盖默认的 `latest` 标签，这非常重要。
-`--no-git-tag` 跳过为快照包创建 git 标签（只有稳定版本是才有，这是默认行为）。
+
+- `--tag` 参数可以用自定义的“分发标签”发布到 npm 上，而不是覆盖默认的 `latest` 标签，这非常重要。
+- `--no-git-tag` 跳过为快照包创建 git 标签（只有稳定版本是才有，这是默认行为）。
 
 >[!warning]
 >“快照版本”不是“稳定版本”。因此不建议将更改合并到主分支上，你可以单独用一个分支去保存快照的版本和标签，但记住，永远也不要将这个分支合并到主分支上。
 
 ### 预发行版
 
-预发行版非常复杂，Changesets 专门用两种变更模式来区分“预发行版”和“稳定版”。
+预发行版非常复杂，Changesets 专门用两种变更模式来区分“预发行版”和“标准版本”。
 
-想要发布预发行版，必须要先进入“预发布模式”：
+想要发布预发行版，要先进入“预发布模式”：
 ```shell
 npm run changeset pre enter alpha
 ```
-* `pre enter` 是进入预发布模式的命令关键字。
+* `pre enter` 是进入预发布模式的关键命令。
 * `alpha` 是一个标签，在最后发布时会被用做“分发标签”。
 
 进入“预发布模式”后，Changesets 会在 `.changeset` 目录下创建一个 `pre.json` 的文件，用于记录预发行版本的状态和信息。
 ```markdown
 {
   "mode": "pre",
-  "tag": "beta",
+  "tag": "alpha",
   "initialVersions": {
     "core": "6.0.0",
     "pkg": "2.2.0",
@@ -341,9 +349,9 @@ npm run changeset pre enter alpha
 }
 ```
 
-在预发布模式下我们可以像以往那样使用 `changeset` 命令创建变更集文件；使用`changeset version` 命令来消耗变更集文件来实现版本提升与日志记录。但有一点非常不同，那就是**在预发布模式下消耗变更集文件并不会实际删除 `.changeset` 目录下的变更集文件**。
-
-在“预发布模式”下消耗变更集文件会递增预发布版本计数，即从默认的 `-alpha.0` 递增为 `-alpha.1`
+在预发布模式下我们可以像以往那样使用 `changeset` 命令创建变更集文件；使用`changeset version` 命令来消耗变更集文件来进行版本提升和日志记录。但有几点非常不同：
+- 预发布模式下消耗变更集文件并不会实际删除变更集文件。
+- 预发布模式下消耗变更集文件并不会提升语义化版本，而是会递增预发布版本计数，即从默认的 `-alpha.0` 递增为 `-alpha.1`
 
 当需要发布预发行版本时，正常执行 `changeset publish` 命令即可，此时 `alpha` 标签将会作为 NPM 包的 dist 标签发布到 Registry 上。
 
@@ -361,8 +369,6 @@ git add *
 git commit -m 'feat: 进入预发布模式发布 xxx-alpha.1 版本'
 npm run changeset publish
 git push --follow-tags
-
-npm run changeset pre exit # exit pre mode
 ```
 
 若想再次期间变更 tag，只需先退出预发布模式，然后用新的 tag 再进入预发布模式即可：
@@ -384,6 +390,7 @@ npm run changeset publish
 git push --follow-tags
 ```
 发布命令将像往常一样将所有内容发布到 `latest` 标签上。
+
 ## 配置文件
 
 认识一下 `.changeset/config.json` 配置文件相关的字段：
@@ -479,7 +486,7 @@ git push --follow-tags
 	- 指定快照版本的基础版本，默认 `0.0.0` 。
 - `prereleaseTemplate`: 
 	- 自定义快照版本的后缀。
-	- 可以使用的占位符有：`{tag}`、`{commit}`、`{timestamp}`、`{datetime}`。
+	- 可使用的占位符有：`{tag}`、`{commit}`、`{timestamp}`、`{datetime}`。
 	- 默认占位符为：`{tag}-{datetime}` 。
 
 ### schema
@@ -497,7 +504,7 @@ git push --follow-tags
 ### init
 
 初始化项目，该命令只需要执行一次。
-此命令会在项目根目录创建 `.changeset` 隐藏目录，并生成配置文件、自述文件。
+此命令会在项目根目录创建 `.changeset` 隐藏目录，并生成 `.config.json` 配置文件、自述文件等。
 
 ### add
 
@@ -508,13 +515,11 @@ changeset add
 changeset 
 ```
 
-此命令会以交互问卷的方式获取变更的包、要提升的版本类型以及变更日志信息，最后生成变更集文件。
+此命令会以交互问卷的方式获取变更的包、要提升的版本类型以及变更的日志信息，最后生成变更集文件。
 
 选项参数：
 * `--empty`
   创建空的变更集文件。通常只有在您有阻止合并的 CI 时才需要。
-* `--open`
-  创建变更集文件，并用外部编辑器打开。
 
 ### version
 
@@ -592,8 +597,8 @@ git push --follow-tags
 
 ### tag
 
-使用包的版本来创建git标签。
-该命令的行为与 `changeset publish` 创建git标签相同。主要用于自定义发包的场景，比如用 `npm run publish -ws` 替代 `changeset publish`，此时 `changeset add` 可以很方便的为所有包创建 git 标签。 
+使用包的版本号来创建 git 标签。
+该命令的行为与 `changeset publish` 创建git标签相同。主要用于自定义发包的场景，比如用 `npm run publish -ws` 替代 `changeset publish`，此时 `changeset tag` 可以很方便的为所有子包创建 git 标签。 
 
 通常是在 `chagneset version` 命令之后运行 `changeset tag`，以便在创建 git 标签之前更新 `package.json` 版本。
 
@@ -614,11 +619,9 @@ Changesets 默认使用内置的 `@changesets/changelog-git` 包生成默认的�
 - `getReleaseLine`：获取当前的版本发布线。
 - `getDependencyReleaseLine`：获取依赖的版本发布线。
 
-> 从上一次 `chagneset publish` 后到最近一次将要发布的所有变更就是一条版本发布线（Release Line）。
-
 下面是方法的执行时机：
-* `getReleaseLine` 方法会在消耗变更集文件时为每个受影响的包调用一次，如果一个 changeset 前言数据列出了多个受影响的包，这会为每个包都调用一次该方法，以生成日志信息。
-* `getDependencyReleaseLine` 该方法会在“包”的依赖包[^2]发生变更时调用，用于生成依赖者包[^3]的日志信息。因为可能会有多个依赖，所以这里接收的参数是一个数组。
+* `getReleaseLine` 方法会在消耗变更集文件时为每个受影响的包调用一次，如果一个 changeset 前言数据列出了多个受影响的包，这会为每个包都调用一次该方法，以生成日志信息。因此它的调用次数是：“变更集文件 * 受影响的包”
+* `getDependencyReleaseLine` 当包作为“依赖包”且存在需要依赖更新的“依赖者包”[^3]时调用。因为可能会存在多个依赖者包，所以这里接收的参数是一个数组。
 
 下面是方法参数说明：
 - `getReleaseLine(changeset, type, options)`
@@ -627,8 +630,8 @@ type VersionType = 'patch' | 'minor' | 'major';
 type Changeset = {
 	summary:string; //当前 changeset 文件的摘要，如果有行，则用\n表示换行。
 	id:string // changeset 文件的名称。
-	// 返回最近一次包含变更集合文件的 commit 号。 如果开启了自动 git 添加与提交。
-	commit:string 
+	// 返回当前变更集文件所处的 commit 号（必须要提交到暂存区）
+	commit?:string 
 	// 一个数组，如果一个 changeset 文件中有多个包。
 	release:{name:string, type:VersionType}[] 
 }
