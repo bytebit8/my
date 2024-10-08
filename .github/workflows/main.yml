@@ -25,15 +25,20 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
+      - name: Debugger
+        run: echo 'head_ref:${{github.head_ref}}'
+
       - name: Create Release Pull Request
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
 
       - name: Create Changeset Tag
+        if: github.head_ref == 'changeset-release/master'
         run: npm run changeset tag
 
       - name: Push Changest Tag
         run: git push --follow-tags
+        if: github.head_ref == 'changeset-release/master'
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
