@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "MiBrowserslist",
       "MiCharityDonationHandLoveIcon",
       "MiBoxLoveLikeFavouriteHeartPackageGiftSvgrepoCom",
       "MiFavouriteStarSvgrepoCom",
-      "🧩",
-      "🦋"
+      "🧩"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -52,5 +52,6 @@
   "前端工程化/PackageManager/NPM": "MiNpmIcon",
   "前端工程化/Changesets": "🦋",
   "前端工程化": "🧩",
-  "Favourite": "MiFavouriteStarSvgrepoCom"
+  "Favourite": "MiFavouriteStarSvgrepoCom",
+  "前端工程化/Browserslist": "MiBrowserslist"
 }
