@@ -1,5 +1,11 @@
 # my
 
+## 1.0.6
+
+### Patch Changes
+
+- e058cc1: add browserslist docs.
+
 ## 1.0.5
 
 ### Patch Changes
