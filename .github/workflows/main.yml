@@ -26,7 +26,7 @@ jobs:
         run: npm ci
 
       - name: Get PR Source Branch
-        run: echo "Source branch is: ${{ github.head_ref }}"
+        run:  echo "Source branch is ${{ github.head_ref }}"
 
       - name: Create Release Pull Request
         uses: changesets/action@v1
