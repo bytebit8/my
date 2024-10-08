@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "3912c9712a84644d",
+        "id": "701355ad31f77b50",
         "type": "tabs",
         "children": [
           {
-            "id": "4e24e3dd2e221d15",
+            "id": "a6fb021481c5cb16",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "前端工程化/Changesets/Changesets 入门精通.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 382
+    "width": 338
   },
   "right": {
     "id": "9441c43221054697",
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "前端工程化/Changesets/Changesets 入门精通.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "前端工程化/Changesets/Changesets 入门精通.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "前端工程化/Changesets/Changesets 入门精通.md"
+              }
             }
           }
         ],
@@ -126,7 +134,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 443
+    "width": 262
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -140,8 +148,17 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "4e24e3dd2e221d15",
+  "active": "a6fb021481c5cb16",
   "lastOpenFiles": [
+    "前端工程化/Browserslist/Browserslist 文档.md",
+    "JavaScript/ECMAScript 6.md",
+    "JavaScript/Promise.md",
+    "前端工程化/Browserslist/assets/8b396b52deea9350ff7be3a7b5a63b00_MD5.jpeg",
+    "前端工程化/Browserslist/assets/Pasted image 20240930173229.png",
+    "前端工程化/Browserslist/assets",
+    "前端工程化/PackageManager/NPM/19 × NPM CLI - 命令大全.md",
+    "前端工程化/PackageManager/00 × 资源引用.md",
+    "前端工程化/Browserslist",
     "CHANGELOG.md",
     "Favourite/一文搞懂 OTP 双因素认证  monchickey 探索和分享计算机技术.md",
     "前端工程化/PackageManager/NPM/34 × NPM CLI - explain.md",
@@ -160,24 +177,17 @@
     "前端工程化/PackageManager/NPM/22 × NPM CLI - ci.md",
     "前端工程化/PackageManager/NPM/21 × NPM CLI - install.md",
     "前端工程化/PackageManager/NPM/20 × NPM CLI - init & create.md",
-    "前端工程化/PackageManager/NPM/19 × NPM CLI - 命令大全.md",
     "前端工程化/PackageManager/认识 package.json 文件.md",
     "前端工程化/PackageManager/NPM/assets/ac1edc332028a8d4ff8cf1756c09ff94_MD5.jpeg",
     "前端工程化/PackageManager/NPM/assets/Pasted image 20240930114741.png",
     "前端工程化/PackageManager/NPM/NPM 故障排除.md",
     "前端工程化/PackageManager/NPM/13 × 脚本 (Scripts).md",
-    "前端工程化/PackageManager/NPM/07 × 包的安装策略.md",
-    "前端工程化/PackageManager/NPM/18 × NPM CLI - npm & npx.md",
-    "前端工程化/PackageManager/NPM/17 × 认识 package-lock.json 文件.md",
-    "前端工程化/PackageManager/NPM/16 × 配置参数.md",
     "前端工程化/PackageManager/NPM/assets/6aa772d2b9a9d2e832571c565cfeec08_MD5.jpeg",
     "前端工程化/PackageManager/NPM/assets/97d330ed8628cba9cdb25a8743a72113_MD5.jpeg",
     "前端工程化/PackageManager/NPM/assets/18e09342441c0e65f00948ccac08700a_MD5.svg",
     "前端工程化/PackageManager/NPM/assets/77132fbf7223bf9c3365def8471b3fd0_MD5.jpeg",
     "前端工程化/PackageManager/NPM/assets/b4ef5b646c28459879ad3a7cdba46f39_MD5.svg",
     "前端工程化/PackageManager/NPM/assets/Pasted image 20240907102227.png",
-    "前端工程化/PackageManager/NPM/assets/Pasted image 20240907103253.png",
-    "前端工程化/PackageManager/NPM/assets/Pasted image 20240912230636.png",
     "前端工程化/PackageManager/assets",
     "Favourite/assets",
     "Favourite/MarkDownload-export-2024-09-13.json",
@@ -186,8 +196,6 @@
     "Favourite/2024年9月13日-一文搞懂OTP双因素认证monchickey探索和分享计算机技术.md.crswap",
     "Favourite/attachments",
     "Favourite",
-    "assets",
-    "asserts",
     "前端工程化/Changesets/assets/未命名.canvas",
     "前端工程化/Changesets/未命名.canvas",
     "Go/慕课go开发工程师体系课/assets/未命名.canvas"
