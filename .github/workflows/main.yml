@@ -26,14 +26,15 @@ jobs:
         run: npm ci
 
       - name: Create Release Pull Request
+        id: changesets
         uses: changesets/action@v1
+        with:
+            publish: npm run changeset tag
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
 
-      - name: Create Changeset Tag
-        run: npm run changeset tag
-
       - name: Push Changest Tag
+        if: steps.changesets.outputs.published == 'true'
         run: git push --follow-tags
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
