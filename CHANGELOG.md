@@ -1,5 +1,11 @@
 # my
 
+## 1.0.7
+
+### Patch Changes
+
+- 426c2f4: update changesets docs.
+
 ## 1.0.6
 
 ### Patch Changes
