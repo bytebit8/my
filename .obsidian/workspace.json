@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "前端工程化/Changesets/Changesets 项目架构.md",
+                "file": "CHANGELOG.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "前端工程化/Changesets/Changesets 项目架构.md",
+                "file": "CHANGELOG.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "前端工程化/Changesets/Changesets 项目架构.md",
+                "file": "CHANGELOG.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "前端工程化/Changesets/Changesets 项目架构.md"
+                "file": "CHANGELOG.md"
               }
             }
           }
@@ -150,25 +150,32 @@
   },
   "active": "21d00abd7c02b9ac",
   "lastOpenFiles": [
-    "前端工程化/Changesets/Changesets 入门精通.md",
     "前端工程化/Changesets/Changesets 项目架构.md",
+    "杂记/assets",
+    "杂记/免费 HTML 模板下载.md",
+    "杂记/URI：Uniform Resource Identifier.md",
     "前端工程化/PackageManager/语义化版本控制和分发标签.md",
-    "前端工程化/Changesets/assets/how_dose_changesets_work.md",
-    "前端工程化/Changesets/assets/changeset-version.md",
-    "CHANGELOG.md",
-    "前端工程化/Browserslist/Browserslist 文档.md",
-    "JavaScript/ECMAScript 6.md",
-    "JavaScript/Promise.md",
-    "前端工程化/Browserslist/assets/8b396b52deea9350ff7be3a7b5a63b00_MD5.jpeg",
-    "前端工程化/Browserslist/assets/Pasted image 20240930173229.png",
-    "前端工程化/Browserslist/assets",
-    "前端工程化/PackageManager/NPM/19 × NPM CLI - 命令大全.md",
-    "前端工程化/PackageManager/00 × 资源引用.md",
-    "前端工程化/Browserslist",
-    "Favourite/一文搞懂 OTP 双因素认证  monchickey 探索和分享计算机技术.md",
+    "前端工程化/PackageManager/语义化版本号变更.md",
+    "前端工程化/PackageManager/认识 package.json 文件.md",
+    "前端工程化/PackageManager/如何挑选 NPM 包？.md",
+    "前端工程化/PackageManager/npmrc.md",
+    "前端工程化/PackageManager/npm 包的安全性.md",
+    "前端工程化/PackageManager/npm 包的基础概念.md",
+    "前端工程化/PackageManager/assets/fcee96042e1d46161185b8d3f7bfcff8_MD5.jpeg",
+    "前端工程化/PackageManager/assets/c28f17c43a0ed0074ddebf1d4c917bc8_MD5.jpeg",
+    "前端工程化/PackageManager/assets/c18dec5786be8c009c827847351b2622_MD5.jpeg",
+    "前端工程化/PackageManager/assets/ab52fc787b20985068b3503a6c4d999a_MD5.jpeg",
+    "前端工程化/PackageManager/assets/Pasted image 20240921181815.png",
+    "前端工程化/PackageManager/assets/79df1bf920e20f41d76c1c13596644a6_MD5.jpeg",
+    "前端工程化/PackageManager/assets/76491bee1e809edb6c01b1963f9e033f_MD5.jpeg",
+    "前端工程化/PackageManager/assets/6a368677b2c0643baa64a695aeebe4d3_MD5.jpeg",
+    "前端工程化/PackageManager/assets/507ddf881f5e169562b17f83b8299ac6_MD5.jpeg",
+    "前端工程化/PackageManager/assets/4268e18ad8a4020447a937440a3724e6_MD5.jpeg",
+    "前端工程化/PackageManager/assets",
+    "前端工程化/PackageManager/NPM/assets",
+    "前端工程化/PackageManager/NPM/NPM 故障排除.md",
     "前端工程化/PackageManager/NPM/34 × NPM CLI - explain.md",
     "前端工程化/PackageManager/NPM/33 × NPM CLI - view.md",
-    "前端工程化/PackageManager/NPM/34 × NPM CLI - pkg.md",
     "前端工程化/PackageManager/NPM/32 × NPM CLI - audit.md",
     "前端工程化/PackageManager/NPM/31 × NPM CLI - config.md",
     "前端工程化/PackageManager/NPM/30 × NPM CLI - diff.md",
@@ -180,22 +187,15 @@
     "前端工程化/PackageManager/NPM/24 × NPM CLI - ls.md",
     "前端工程化/PackageManager/NPM/23 × NPM CLI - run.md",
     "前端工程化/PackageManager/NPM/22 × NPM CLI - ci.md",
-    "前端工程化/PackageManager/NPM/assets/ac1edc332028a8d4ff8cf1756c09ff94_MD5.jpeg",
-    "前端工程化/PackageManager/NPM/assets/Pasted image 20240930114741.png",
-    "前端工程化/PackageManager/NPM/assets/6aa772d2b9a9d2e832571c565cfeec08_MD5.jpeg",
-    "前端工程化/PackageManager/NPM/assets/97d330ed8628cba9cdb25a8743a72113_MD5.jpeg",
-    "前端工程化/PackageManager/NPM/assets/18e09342441c0e65f00948ccac08700a_MD5.svg",
-    "前端工程化/PackageManager/NPM/assets/77132fbf7223bf9c3365def8471b3fd0_MD5.jpeg",
-    "前端工程化/PackageManager/NPM/assets/b4ef5b646c28459879ad3a7cdba46f39_MD5.svg",
-    "前端工程化/PackageManager/NPM/assets/Pasted image 20240907102227.png",
-    "前端工程化/PackageManager/assets",
+    "前端工程化/PackageManager/NPM/21 × NPM CLI - install.md",
+    "前端工程化/PackageManager/NPM/20 × NPM CLI - init & create.md",
+    "前端工程化/PackageManager/NPM",
+    "前端工程化/Browserslist/assets",
+    "前端工程化/Browserslist",
     "Favourite/assets",
     "Favourite/MarkDownload-export-2024-09-13.json",
-    "Favourite/未确认 491379.crdownload",
-    "Favourite/screenshots",
-    "Favourite/2024年9月13日-一文搞懂OTP双因素认证monchickey探索和分享计算机技术.md.crswap",
-    "Favourite/attachments",
     "Favourite",
+    "Favourite/未确认 491379.crdownload",
     "前端工程化/Changesets/assets/未命名.canvas",
     "前端工程化/Changesets/未命名.canvas",
     "Go/慕课go开发工程师体系课/assets/未命名.canvas"
