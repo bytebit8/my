@@ -1,5 +1,11 @@
 # my
 
+## 1.0.8
+
+### Patch Changes
+
+- 3fb1cf8: docs: 添加“成功日记”栏目
+
 ## 1.0.7
 
 ### Patch Changes
