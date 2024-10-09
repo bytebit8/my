@@ -32,8 +32,12 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
 
       - name: Get PR Source Branch
-        run:  echo "$github"
-  
+        run:  echo $github
+
+      - name: Get PR Source Branch
+        run:  echo $steps
+
+
       - name: Create Changeset Tag
         run: npm run changeset tag
 
