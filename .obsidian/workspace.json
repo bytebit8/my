@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "51ba8197ebc5e1f5",
+        "id": "1fd9f8f1709b5cdb",
         "type": "tabs",
         "children": [
           {
-            "id": "21d00abd7c02b9ac",
+            "id": "37df9810e76c696d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "CHANGELOG.md",
+                "file": "成功日记/2024.md",
                 "mode": "source",
                 "source": false
               }
@@ -69,7 +69,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 338
+    "width": 370
   },
   "right": {
     "id": "9441c43221054697",
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "CHANGELOG.md",
+                "file": "成功日记/2024.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "CHANGELOG.md",
+                "file": "成功日记/2024.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "CHANGELOG.md"
+                "file": "成功日记/2024.md"
               }
             }
           }
@@ -148,8 +148,12 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "21d00abd7c02b9ac",
+  "active": "37df9810e76c696d",
   "lastOpenFiles": [
+    "成功日记/2024.md",
+    "成功日记/assets",
+    "成功日记",
+    "CHANGELOG.md",
     "前端工程化/Changesets/Changesets 项目架构.md",
     "杂记/assets",
     "杂记/免费 HTML 模板下载.md",
@@ -186,16 +190,11 @@
     "前端工程化/PackageManager/NPM/25 × NPM CLI - pkg.md",
     "前端工程化/PackageManager/NPM/24 × NPM CLI - ls.md",
     "前端工程化/PackageManager/NPM/23 × NPM CLI - run.md",
-    "前端工程化/PackageManager/NPM/22 × NPM CLI - ci.md",
-    "前端工程化/PackageManager/NPM/21 × NPM CLI - install.md",
-    "前端工程化/PackageManager/NPM/20 × NPM CLI - init & create.md",
     "前端工程化/PackageManager/NPM",
     "前端工程化/Browserslist/assets",
     "前端工程化/Browserslist",
     "Favourite/assets",
     "Favourite/MarkDownload-export-2024-09-13.json",
-    "Favourite",
-    "Favourite/未确认 491379.crdownload",
     "前端工程化/Changesets/assets/未命名.canvas",
     "前端工程化/Changesets/未命名.canvas",
     "Go/慕课go开发工程师体系课/assets/未命名.canvas"
