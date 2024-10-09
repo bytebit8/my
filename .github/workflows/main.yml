@@ -28,15 +28,13 @@ jobs:
       - name: Create Release Pull Request
         id: changesets
         uses: changesets/action@v1
+        with:
+            publish: npm run changeset tag
         env:
           GITHUB_TOKEN: ${{ secrets.CHANGESETS_GITHUB_TOKEN }}
 
       - name: Get PR Source Branch
-        run:  echo $github
-
-      - name: Get PR Source Branch
-        run:  echo $steps
-
+        run: echo "The release URL is ${{ steps.changesets.outputs.published }}"
 
       - name: Create Changeset Tag
         run: npm run changeset tag
