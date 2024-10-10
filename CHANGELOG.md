@@ -1,5 +1,11 @@
 # my
 
+## 1.0.9
+
+### Patch Changes
+
+- 76e1d9b: docs: 添加 git-filter-repo 工具的使用说明文档
+
 ## 1.0.8
 
 ### Patch Changes
