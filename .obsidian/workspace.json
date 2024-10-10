@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "1fd9f8f1709b5cdb",
+        "id": "1451e8ec1a3226ec",
         "type": "tabs",
         "children": [
           {
-            "id": "37df9810e76c696d",
+            "id": "0ed982ee87466e1b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "杂记/使用 git-filter-repo 迁移仓库.md",
+                "file": "git/【案例】commit 操作.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "杂记/使用 git-filter-repo 迁移仓库.md",
+                "file": "git/【案例】commit 操作.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "杂记/使用 git-filter-repo 迁移仓库.md",
+                "file": "git/【案例】commit 操作.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "杂记/使用 git-filter-repo 迁移仓库.md"
+                "file": "git/【案例】commit 操作.md"
               }
             }
           }
@@ -148,15 +148,28 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "dbd0c5c073094d67",
+  "active": "0ed982ee87466e1b",
   "lastOpenFiles": [
+    "git/【案例】文件操作.md",
+    "git/【案例】commit 操作.md",
+    "git/【案例】分支操作.md",
+    "git/【案例】将更改追加到最近一次提交.md",
+    "git/【案例】向历史提交追加更改.md",
+    "git/【案例】使用远程分支覆盖本地分支.md",
+    "git/【案例】修改最近一次 commit 消息.md",
+    "git/【案例】重置到指定的 commit.md",
+    "git/【案例】恢复指定提交，并将更改保存到暂存区.md",
+    "git/未命名",
+    "git/GitHub",
+    "git/GitLab",
+    "git",
+    "成功日记/2024.md",
+    "CHANGELOG.md",
+    "杂记/使用 git-filter-repo 迁移仓库.md",
     "Gitlab",
     "前端工程化/PackageManager/认识 package.json 文件.md",
-    "杂记/使用 git-filter-repo 迁移仓库.md",
-    "成功日记/2024.md",
     "成功日记/assets",
     "成功日记",
-    "CHANGELOG.md",
     "前端工程化/Changesets/Changesets 项目架构.md",
     "杂记/assets",
     "杂记/免费 HTML 模板下载.md",
@@ -183,19 +196,6 @@
     "前端工程化/PackageManager/NPM/34 × NPM CLI - explain.md",
     "前端工程化/PackageManager/NPM/33 × NPM CLI - view.md",
     "前端工程化/PackageManager/NPM/32 × NPM CLI - audit.md",
-    "前端工程化/PackageManager/NPM/31 × NPM CLI - config.md",
-    "前端工程化/PackageManager/NPM/30 × NPM CLI - diff.md",
-    "前端工程化/PackageManager/NPM/29 × NPM CLI - exec.md",
-    "前端工程化/PackageManager/NPM/28 × NPM CLI - link.md",
-    "前端工程化/PackageManager/NPM/27 × NPM CLI - pack.md",
-    "前端工程化/PackageManager/NPM/26 × NPM CLI - publish.md",
-    "前端工程化/PackageManager/NPM/25 × NPM CLI - pkg.md",
-    "前端工程化/PackageManager/NPM/24 × NPM CLI - ls.md",
-    "前端工程化/PackageManager/NPM",
-    "前端工程化/Browserslist/assets",
-    "前端工程化/Browserslist",
-    "Favourite/assets",
-    "Favourite/MarkDownload-export-2024-09-13.json",
     "前端工程化/Changesets/assets/未命名.canvas",
     "前端工程化/Changesets/未命名.canvas",
     "Go/慕课go开发工程师体系课/assets/未命名.canvas"

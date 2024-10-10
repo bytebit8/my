@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "LiGitlab",
-      "📓",
-      "MiBrowserslist",
-      "MiCharityDonationHandLoveIcon",
-      "MiBoxLoveLikeFavouriteHeartPackageGiftSvgrepoCom"
+      "MiGithubIcon",
+      "MiGitlab",
+      "MiGitIcon",
+      "MiGit",
+      "LiGitlab"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -54,5 +54,8 @@
   "前端工程化": "🧩",
   "Favourite": "MiFavouriteStarSvgrepoCom",
   "前端工程化/Browserslist": "MiBrowserslist",
-  "成功日记": "📓"
+  "成功日记": "📓",
+  "git": "MiGitIcon",
+  "git/GitLab": "MiGitlab",
+  "git/GitHub": "MiGithubIcon"
 }
