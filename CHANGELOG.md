@@ -1,5 +1,11 @@
 # my
 
+## 1.0.10
+
+### Patch Changes
+
+- 9612189: docs: 添加 git 实践 & 更新日记
+
 ## 1.0.9
 
 ### Patch Changes
