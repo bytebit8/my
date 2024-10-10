@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "成功日记/2024.md",
+                "file": "杂记/使用 git-filter-repo 迁移仓库.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "成功日记/2024.md",
+                "file": "杂记/使用 git-filter-repo 迁移仓库.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "成功日记/2024.md",
+                "file": "杂记/使用 git-filter-repo 迁移仓库.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "成功日记/2024.md"
+                "file": "杂记/使用 git-filter-repo 迁移仓库.md"
               }
             }
           }
@@ -148,8 +148,11 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "37df9810e76c696d",
+  "active": "dbd0c5c073094d67",
   "lastOpenFiles": [
+    "Gitlab",
+    "前端工程化/PackageManager/认识 package.json 文件.md",
+    "杂记/使用 git-filter-repo 迁移仓库.md",
     "成功日记/2024.md",
     "成功日记/assets",
     "成功日记",
@@ -160,7 +163,6 @@
     "杂记/URI：Uniform Resource Identifier.md",
     "前端工程化/PackageManager/语义化版本控制和分发标签.md",
     "前端工程化/PackageManager/语义化版本号变更.md",
-    "前端工程化/PackageManager/认识 package.json 文件.md",
     "前端工程化/PackageManager/如何挑选 NPM 包？.md",
     "前端工程化/PackageManager/npmrc.md",
     "前端工程化/PackageManager/npm 包的安全性.md",
@@ -189,7 +191,6 @@
     "前端工程化/PackageManager/NPM/26 × NPM CLI - publish.md",
     "前端工程化/PackageManager/NPM/25 × NPM CLI - pkg.md",
     "前端工程化/PackageManager/NPM/24 × NPM CLI - ls.md",
-    "前端工程化/PackageManager/NPM/23 × NPM CLI - run.md",
     "前端工程化/PackageManager/NPM",
     "前端工程化/Browserslist/assets",
     "前端工程化/Browserslist",
