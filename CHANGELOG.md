@@ -1,5 +1,12 @@
 # my
 
+## 1.0.11
+
+### Patch Changes
+
+- 0f29039: update MySQL 基本操作
+  update 成功日记
+
 ## 1.0.10
 
 ### Patch Changes
