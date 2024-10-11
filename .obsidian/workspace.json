@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "1451e8ec1a3226ec",
+        "id": "007fc381e6d93a76",
         "type": "tabs",
         "children": [
           {
-            "id": "0ed982ee87466e1b",
+            "id": "f697e6f8b6af596e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "git/【案例】commit 操作.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -85,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "git/【案例】commit 操作.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -102,7 +97,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "git/【案例】commit 操作.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -124,9 +118,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "git/【案例】commit 操作.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -148,10 +140,23 @@
       "hidden-folder-obsidian:显示文件夹": false
     }
   },
-  "active": "0ed982ee87466e1b",
+  "active": "f697e6f8b6af596e",
   "lastOpenFiles": [
-    "git/【案例】文件操作.md",
+    "成功日记/2024.md",
+    "杂记/使用 git-filter-repo 迁移仓库.md",
+    "SQL/MySQL 基本操作.md",
+    "SQL/索引列表.md",
+    "SQL/SQL 必知必会（第五版）.md",
+    "前端工程化/PackageManager/00 × 资源引用.md",
+    "SQL/assets",
+    "SQL/sl.md",
+    "前端工程化/PackageManager/PNPM/PNPM Docs.md",
+    "前端工程化/PackageManager/PNPM/PNPM VS NPM.md",
+    "前端工程化/未命名.md",
+    "前端工程化/PackageManager/PNPM",
+    "CHANGELOG.md",
     "git/【案例】commit 操作.md",
+    "git/【案例】文件操作.md",
     "git/【案例】分支操作.md",
     "git/【案例】将更改追加到最近一次提交.md",
     "git/【案例】向历史提交追加更改.md",
@@ -163,9 +168,6 @@
     "git/GitHub",
     "git/GitLab",
     "git",
-    "成功日记/2024.md",
-    "CHANGELOG.md",
-    "杂记/使用 git-filter-repo 迁移仓库.md",
     "Gitlab",
     "前端工程化/PackageManager/认识 package.json 文件.md",
     "成功日记/assets",
@@ -176,10 +178,6 @@
     "杂记/URI：Uniform Resource Identifier.md",
     "前端工程化/PackageManager/语义化版本控制和分发标签.md",
     "前端工程化/PackageManager/语义化版本号变更.md",
-    "前端工程化/PackageManager/如何挑选 NPM 包？.md",
-    "前端工程化/PackageManager/npmrc.md",
-    "前端工程化/PackageManager/npm 包的安全性.md",
-    "前端工程化/PackageManager/npm 包的基础概念.md",
     "前端工程化/PackageManager/assets/fcee96042e1d46161185b8d3f7bfcff8_MD5.jpeg",
     "前端工程化/PackageManager/assets/c28f17c43a0ed0074ddebf1d4c917bc8_MD5.jpeg",
     "前端工程化/PackageManager/assets/c18dec5786be8c009c827847351b2622_MD5.jpeg",
@@ -190,12 +188,6 @@
     "前端工程化/PackageManager/assets/6a368677b2c0643baa64a695aeebe4d3_MD5.jpeg",
     "前端工程化/PackageManager/assets/507ddf881f5e169562b17f83b8299ac6_MD5.jpeg",
     "前端工程化/PackageManager/assets/4268e18ad8a4020447a937440a3724e6_MD5.jpeg",
-    "前端工程化/PackageManager/assets",
-    "前端工程化/PackageManager/NPM/assets",
-    "前端工程化/PackageManager/NPM/NPM 故障排除.md",
-    "前端工程化/PackageManager/NPM/34 × NPM CLI - explain.md",
-    "前端工程化/PackageManager/NPM/33 × NPM CLI - view.md",
-    "前端工程化/PackageManager/NPM/32 × NPM CLI - audit.md",
     "前端工程化/Changesets/assets/未命名.canvas",
     "前端工程化/Changesets/未命名.canvas",
     "Go/慕课go开发工程师体系课/assets/未命名.canvas"

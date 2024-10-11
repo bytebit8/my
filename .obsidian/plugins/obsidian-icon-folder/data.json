@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "MiMysqlIcon",
+      "MiPnpm",
       "MiGithubIcon",
       "MiGitlab",
-      "MiGitIcon",
-      "MiGit",
-      "LiGitlab"
+      "MiGitIcon"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -57,5 +57,7 @@
   "成功日记": "📓",
   "git": "MiGitIcon",
   "git/GitLab": "MiGitlab",
-  "git/GitHub": "MiGithubIcon"
+  "git/GitHub": "MiGithubIcon",
+  "前端工程化/PackageManager/PNPM": "MiPnpm",
+  "SQL/索引列表.md": "MiMysqlIcon"
 }
