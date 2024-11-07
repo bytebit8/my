@@ -7,5 +7,6 @@
   "cssTheme": "Primary",
   "nativeMenus": false,
   "showViewHeader": true,
-  "theme": "moonstone"
+  "theme": "moonstone",
+  "accentColor": ""
 }
