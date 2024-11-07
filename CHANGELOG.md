@@ -1,5 +1,11 @@
 # my
 
+## 1.0.12
+
+### Patch Changes
+
+- d9e506f: add character sets and encoding overview
+
 ## 1.0.11
 
 ### Patch Changes
