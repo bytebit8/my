@@ -36,17 +36,14 @@
   "Go": "MiGopher",
   "Vue": "MiVue",
   "TypeScript": "MiTypescriptIcon",
-  "Svelte": "MiSvelteIcon",
   "SQL": "MiMysql",
   "SQL/MySQL 基本操作.md": "MiMysqlIcon",
-  "Solid": "MiSolidjsIcon",
   "Nginx": "MiNginx",
   "JavaScript": "MiJavascript",
   "Linux": "MiLinuxTux",
   "Mathematics": "MiMathematicsSvgrepoCom",
   "杂记": "MiArchivesDocumentSvgrepoCom",
   "Go/慕课go开发工程师体系课/阶段1：Go语言基础入门和编程思维.md": "MiGo",
-  "SQL/SQL 必知必会（第五版）.md": "MiMysqlIcon",
   "CHANGELOG.md": "LiInfo",
   "前端工程化/PackageManager": "📦",
   "前端工程化/PackageManager/NPM": "MiNpmIcon",
@@ -58,6 +55,6 @@
   "git": "MiGitIcon",
   "git/GitLab": "MiGitlab",
   "git/GitHub": "MiGithubIcon",
-  "前端工程化/PackageManager/PNPM": "MiPnpm",
-  "SQL/索引列表.md": "MiMysqlIcon"
+  "SQL/索引列表.md": "MiMysqlIcon",
+  "SQL/SQL 必知必会（第五版）.md": "MiMysqlIcon"
 }

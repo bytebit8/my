@@ -12,9 +12,10 @@
     "pageSize": "A4",
     "landscape": false,
     "margin": "0",
-    "downscalePercent": 100
+    "downscalePercent": 90
   },
   "userIgnoreFilters": [
     "node_modules/"
-  ]
+  ],
+  "useMarkdownLinks": true
 }
